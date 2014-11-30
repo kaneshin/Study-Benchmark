@@ -1,0 +1,51 @@
+# Leap Benchmark
+
+
+## Usage
+
+### Run
+
+```
+make
+./main
+```
+
+
+### Test
+
+```
+make test
+./test `./main`
+```
+
+
+### Benchmark Test
+
+```
+make bench
+./bench 10000
+```
+
+Output data to SQLite3.
+
+```
+./bench 10000 -db bench.sqlite
+```
+
+
+### Clean
+
+```
+make clean
+```
+
+
+## License
+
+The MIT License
+
+
+## Author
+
+Shintaro Kaneko <kaneshin0120@gmail.com>
+

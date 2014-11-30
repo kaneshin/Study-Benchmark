@@ -1,0 +1,15 @@
+[core]
+	editor = vim
+	pager = less -R
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
+	grep = auto
+[merge]
+	tool = vimdiff
+[alias]
+	refresh= !git fetch origin && git remote prune origin
+	ta = log --graph --branches --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
