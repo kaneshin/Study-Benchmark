@@ -1,6 +1,9 @@
 *.org
 *.orig
 *.sqlite
+bench
+main
+test
 
 ### C ###
 # Object files
