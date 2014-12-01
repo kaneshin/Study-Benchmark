@@ -31,9 +31,18 @@ main(int argc, char* argv[])
         output_leap();
 
     rt = ((double)(clock() - t) / CLOCKS_PER_SEC);
+
+    // print query
+    if (argc > 3 && 0 == strcmp("-q", argv[2])) {
+        printf("INSERT INTO %s (user, num, time) VALUES (\"__USER__\", %ld, %f);\n", argv[3], n, rt);
+        return SUCCESS;
+    }
+
+    // print stdout
     printf("Finished Benchmark Test (Loop => %ld)\n", n);
     printf("Time: %6f\n", rt);
 
+    // insert data
     if (argc > 3 && 0 == strcmp("-db", argv[2])) {
         sqlite3 *db = connect_db(argv[3]);
         if (NULL == db) {
